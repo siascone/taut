@@ -1,3 +1,4 @@
 # README
 
-Welcome to Taut; a Slack clone.
+##Welcome to Taut!
+a Slack clone.
