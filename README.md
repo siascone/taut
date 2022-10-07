@@ -1,4 +1,4 @@
 # README
 
-## Welcome to Taut!
+### Welcome to Taut!
 a Slack clone.
