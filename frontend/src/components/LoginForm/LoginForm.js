@@ -66,7 +66,9 @@ function LoginForm() {
                 </label>
                 <br />
                 <input className='login-form-button' type="submit" value="Login"/>
+                <br />
                 <button className='login-form-button' onClick={e => demoLogin(e)}>Demo Login</button>
+                <br />
             </form>
             <ul>
                 {errors.map((error, i) => <li key={i}>{error}</li>)}

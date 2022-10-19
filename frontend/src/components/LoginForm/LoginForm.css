@@ -8,6 +8,13 @@
     margin-top: 25px
 }
 
+.login-form-container h1 {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 10px
+}
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -16,5 +23,5 @@
 
 .login-form-button {
     /* width: 100%; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
