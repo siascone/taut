@@ -1,11 +1,11 @@
 .signup-form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
     justify-content: center;
-    /* height: 175px; */
     width: 200px;
     border: 1px solid black;
+    margin-top: 25px
 }
 
 .signup-form {

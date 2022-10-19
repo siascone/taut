@@ -6,3 +6,7 @@
     height: 40px;
     border-bottom: 1px solid black;
 }
+
+.auth-link {
+    padding-left: 10px;
+}

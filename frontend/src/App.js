@@ -6,7 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 
 function App() {
   return (
-    <div>
+    <div className='app-container'>
       <Navigation />
       <Switch>
         <Route exact path='/login' component={LoginForm}/>

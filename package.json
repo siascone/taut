@@ -1,0 +1,26 @@
+{
+  "name": "taut",
+  "version": "1.0.0",
+  "description": "### Welcome to Taut! a Slack clone.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siascone/taut.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siascone/taut/issues"
+  },
+  "homepage": "https://github.com/siascone/taut#readme",
+  "engines": {
+    "node": "16.x"
+  }
+}
