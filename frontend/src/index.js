@@ -3,23 +3,28 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './App'
 import configureStore from './stroe/store';
-import csrfFetch, { restoreCSRF } from './stroe/csrf';
+import csrfFetch from './stroe/csrf';
+import * as sessionActions from './stroe/session';
 
 const store = configureStore();
 
 if (process.env.NODE_ENV !== 'production') {
   window.store = store;
   window.csrfFetch = csrfFetch;
+  window.sessionActions = sessionActions;
+
 }
 
 function Root() {
-  <Provider store={store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  )
 }
 
 const renderApplication = () => {
@@ -31,8 +36,11 @@ const renderApplication = () => {
   );
 }
 
-if (sessionStorage.getItem('X-CSRF-Token') === null) {
-  restoreCSRF().then(renderApplication);
+if (
+  sessionStorage.getItem('X-CSRF-Token') === null ||
+  sessionStorage.getItem('currentUser') === null
+) {
+  store.dispatch(sessionActions.restoreSession()).then(renderApplication);
 } else {
   renderApplication();
 }
