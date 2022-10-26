@@ -11,5 +11,12 @@ Rails.application.routes.draw do
     resource :session, only: [:show, :create, :destroy]
   end
 
+  resources :mentions, only: [:index] do
+    patch 'read', on: :member
+  end
+
+  resources :rooms, only: [:index, :show, :create, :destroy]
+  resources :messages, only: [:create, :destroy]
+
   get '*path', to: 'static_pages#frontend_index'
 end
