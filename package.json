@@ -22,5 +22,8 @@
   "homepage": "https://github.com/siascone/taut#readme",
   "engines": {
     "node": "16.x"
+  },
+  "dependencies": {
+    "@rails/actioncable": "^7.0.4"
   }
 }
